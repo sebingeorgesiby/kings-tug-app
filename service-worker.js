@@ -1,4 +1,4 @@
-const CACHE = "kings-tug-v1";
+const CACHE = "kings-tug-v2";
 const FILES = ["./","index.html","style.css","app.js","manifest.json"];
 
 
