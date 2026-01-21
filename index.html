@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kings Hamilton Tug of War</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#d4af37">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+<h1>🏆 Kings Hamilton Tug of War</h1>
+
+
+<div class="team">
+<h2>Kings Hamilton</h2>
+<input id="kingsName" placeholder="Player name">
+<input id="kingsWeight" type="number" placeholder="Weight kg">
+<button onclick="addPlayer('kings')">Add Player</button>
+<div id="kingsPlayers"></div>
+<div class="total" id="kingsTotal"></div>
+</div>
+
+
+<div class="team">
+<h2>Kings Hamilton Warriors</h2>
+<input id="warriorsName" placeholder="Player name">
+<input id="warriorsWeight" type="number" placeholder="Weight kg">
+<button onclick="addPlayer('warriors')">Add Player</button>
+<div id="warriorsPlayers"></div>
+<div class="total" id="warriorsTotal"></div>
+</div>
+
+
+<div class="section">
+<h2>📅 Attendance</h2>
+<button onclick="markAttendance()">Mark Today’s Attendance</button>
+<div id="attendanceStats"></div>
+</div>
+
+
+<div class="section">
+<h2>📊 Player Weight Graph</h2>
+<select id="playerSelect" onchange="drawGraph()"></select>
+<canvas id="chart" width="320" height="200"></canvas>
+</div>
+
+
+<div class="section">
+<h2>📆 Monthly Calendar</h2>
+<input type="month" id="monthPicker" onchange="renderCalendar()">
+<div id="calendar"></div>
+</div>
+
+
+<div class="section">
+<h2>🥇 Competition Line-up (7 + 2)</h2>
+<div id="lineup"></div>
+</div>
+
+
+<script src="app.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+navigator.serviceWorker.register('service-worker.js');
+}
+</script>
+
+
+</body>
+</html>
